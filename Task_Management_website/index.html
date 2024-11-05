@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Task manager</title>
+  </head>
+  <body class="bg-dark text-light " >
+    <!-- create title -->
+     <div class="text-capitalize text-center my-5" >
+        <h1>Task manager</h1>
+     </div>
+    <!-- creating the body -->
+     <div class="container">
+        <div class="active_tasks_label dropdown">
+            <a class=" btn btn-secondary dropdown-toggle" data-toggle="collapse" href="#active_tasks"  >
+                Tasks
+            </a>
+
+            
+        </div>
+
+
+<!-- tasks list -->
+ <div id="active_tasks" class=" card-body active_tasks collapse " style="min-width: 300px; margin-bottom: 380px;">
+<!-- create task -->
+        
+           
+
+ </div> <!-- end of active tasks-->
+
+        
+
+         
+
+
+
+
+
+
+
+
+     </div>  <!--end of container  -->
+   
+
+     <!-- footer  -->
+<diV class="fixed-bottom bg-dark ">
+<div  id="create" class="btn btn-success w-100 text-capitalize"
+     data-toggle="collapse" data-target="#creation_form"
+       >
+     Add new task
+    </div>
+    <div class="collapsing "  id="creation_form" >
+      <form class="m-2 p-1">
+        <!-- task title  -->
+        <div class="form-group">
+          <label for="formTaskTitle">Task Title</label>
+          <input type="text" class="form-control" id="formTaskTitle" maxlength="40" >
+        </div>
+        <!-- task content -->
+        <div class="form-group">
+          <label for="formTaskContent">Task Content</label>
+          <input type="text" class="form-control" id="formTaskContent" maxlength="200" aria-describedby="contentInfo">
+          <small id="contentInfo" class="form-text text-muted">Add your task content here .</small>
+        </div>
+        <!-- task due -->
+        <div class="form-group">
+          <label for="formTaskDue">Task Due</label>
+          <input type="datetime-local" class="form-control" id="formTaskDue">
+        </div>
+        
+        <!-- submit btn -->
+        <div class="form-group text-center ">
+          <div id="confirmBtn" class="btn btn-primary w-50 mt-2"> Confirm </div>
+        </div>
+        
+
+      </form>
+    </div>
+
+
+</diV>
+
+
+
+
+
+     
+
+     
+
+
+
+
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="main.js"></script>
+   
+  </body>
+</html>

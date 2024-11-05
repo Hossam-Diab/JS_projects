@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS BY HOSSAM DIAB</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ....................title.......................... -->
+      <div class="mainTitle">
+        <h2>CRUDS</h2>
+        <h4>products management system</h4>
+      </div>
+      <!-- .....................inputs......................... -->
+      <div class="inputs">
+        <input type="text" id="title" placeholder="title" />
+        <div class="cash">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="discount"
+          />
+          <span id="total"></span>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="submit">Create</button>
+
+        <div id="search_box">
+          <input
+            onkeyup="search(this.value)"
+            type="text"
+            id="searchInp"
+            placeholder="Search by Title"
+          />
+
+          <button onclick="searchBy(this.id)" id="searchByTitle">
+            Search By Title
+          </button>
+          <button onclick="searchBy(this.id)" id="searchByCategory">
+            Search By Category
+          </button>
+        </div>
+
+        <div id="deleteAllBox"></div>
+      </div>
+
+      <!-- .....................outputs......................... -->
+
+      <div class="outputs">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background: #222;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+
+}
+
+.image{
+display: flex;
+flex-direction: column;
+gap: 50px;
+justify-content: center;
+align-items: center;
+}
+
+.image img , canvas{
+    max-width: 50vw;
+    max-height: 60vh;
+}
+
+.image input{
+    display: none;
+}
+
+.image label{
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px #fff dashed;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.filters ul , .filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    direction: rtl;
+    
+
+}
+
+.filters ul li label{
+
+    color: #fff;
+}
+
+.filters ul li:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.filters ul li a{
+
+    color: #fff;
+    padding: 15px;
+    background: #28a207af;
+    cursor: pointer;
+}
+
+.filters ul li span{
+
+    color: #fff;
+    padding: 15px;
+    background: #a30505b8;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 650px) {
+    .container{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .image img, canvas{
+        max-width: 80vw;
+    }
+}
+
