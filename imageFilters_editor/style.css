@@ -1,99 +1,151 @@
 *{
+    font-family: sans-serif;
+    color: white;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
 }
 
+
 body{
-    background: #333;
-    display: flex;
-    justify-content: center;
+    background-color: #333;
 }
 
 .container{
-    background: #222;
-    width: 80vw;
-    padding: 20px;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 5fr 3fr;
+height: 90%;
+display: grid;
+grid-template-columns: 5fr 3fr;
+padding: 10px;
+margin: 10px;
+gap: 15px;
+
 
 }
 
-.image{
-display: flex;
-flex-direction: column;
-gap: 50px;
-justify-content: center;
-align-items: center;
-}
-
-.image img , canvas{
-    max-width: 50vw;
-    max-height: 60vh;
-}
-
-.image input{
-    display: none;
-}
-
-.image label{
-    color: #fff;
-    padding: 10px 20px;
-    border: 2px #fff dashed;
-    cursor: pointer;
-}
-
-
-
-
-
-
-.filters ul , .filters ul li{
+.filtersBox{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     direction: rtl;
+
+}
+
+
+.filtersBox div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+.imageBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.imageBox img{
+    max-width: 50vw;
+    max-height: 70vh;
+    z-index: 5;
+}
+
+.imageBox input{
+    display: none;
+
+}
+
+.imageBox label{
+    border-style: dashed;
+    padding: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.5s;
     
 
 }
-
-.filters ul li label{
-
-    color: #fff;
+.imageBox label:hover{
+    border-radius: 8px;
+    border-color: #ffffff;
+    background-color: #222;
 }
 
-.filters ul li:last-child{
+#buttonsBox{
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+    align-items: center;
+    
 }
 
-.filters ul li a{
 
-    color: #fff;
-    padding: 15px;
-    background: #28a207af;
+#buttonsBox #reset{
+    background-color: #d43737b9;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.5s;
+   
+
 }
 
-.filters ul li span{
+#buttonsBox #reset:hover{
+    background-color: #971111b9;
+    scale: 1.2;
+    letter-spacing: 1px;
 
-    color: #fff;
-    padding: 15px;
-    background: #a30505b8;
+}
+
+#buttonsBox a{
+    background-color: #37d44cb9;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
+    transition-duration: 0.5s;
+
 }
+
+#buttonsBox a:hover{
+    background-color: #19870cb9;
+    scale: 1.2;
+    letter-spacing: 1px;
+}
+
 
 @media screen and (max-width : 650px) {
     .container{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 50px;
     }
-
-    .image img, canvas{
-        max-width: 80vw;
+    .imageBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
+    .imageBox img{
+        max-width: 80vw;
+        
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
